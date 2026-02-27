@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #f5f3ff;
+  --color-foreground: #1e1b4b;
+  --color-primary: #6366f1;
+  --color-primary-hover: #4f46e5;
+  --color-surface: rgba(255, 255, 255, 0.45);
+  --color-surface-elevated: rgba(255, 255, 255, 0.72);
+  --color-border: rgba(99, 102, 241, 0.1);
+  --color-border-strong: rgba(99, 102, 241, 0.2);
+  --color-text-primary: #1e1b4b;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #8b5cf6;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(199, 210, 254, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 80% at 80% 10%, rgba(165, 243, 252, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 50% 80%, rgba(252, 231, 243, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 90% 70%, rgba(221, 214, 254, 0.4) 0%, transparent 50%),
+    linear-gradient(135deg, #e0e7ff 0%, #ede9fe 16%, #faf5ff 32%, #ecfeff 50%, #fce7f3 68%, #ede9fe 84%, #e0e7ff 100%);
+  background-attachment: fixed;
+  color: var(--color-foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(99, 102, 241, 0.08);
+}
+
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(200%) blur(30px);
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 8px 32px rgba(99, 102, 241, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #8b5cf6);
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.35);
+}
+
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.2);
+  color: #1e1b4b;
+}
