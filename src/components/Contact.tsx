@@ -39,7 +39,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-32 px-6">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      <div className="section-divider absolute inset-x-0 top-0" />
 
       <div className="mx-auto max-w-6xl">
         <SectionHeading
@@ -57,10 +57,10 @@ export default function Contact() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col justify-center"
           >
-            <h3 className="text-2xl font-bold text-text-primary">
+            <h3 className="text-2xl font-bold text-text-primary dark:text-white">
               Get in Touch
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-text-secondary">
+            <p className="mt-4 text-base leading-relaxed text-text-secondary dark:text-gray-200">
               I&apos;m currently open to software engineering and cloud/DevOps
               roles. Whether you have an exciting project or a full-time
               opportunity, feel free to reach out.
@@ -89,8 +89,8 @@ export default function Contact() {
                     {item.emoji}
                   </div>
                   <div>
-                    <p className="text-xs font-medium text-text-secondary">{item.label}</p>
-                    <p className="text-sm font-medium text-text-primary">{item.value}</p>
+                    <p className="text-xs font-medium text-text-secondary dark:text-gray-200">{item.label}</p>
+                    <p className="text-sm font-medium text-text-primary dark:text-white">{item.value}</p>
                   </div>
                 </div>
               ))}
@@ -123,7 +123,7 @@ export default function Contact() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-border-strong text-text-secondary transition-all duration-200 hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-border-strong dark:border-slate-600/25 text-text-secondary dark:text-gray-200 transition-all duration-200 hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
                   aria-label={social.name}
                 >
                   {social.svg}
@@ -144,7 +144,7 @@ export default function Contact() {
             <div className="space-y-6">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="mb-2 block text-xs font-medium uppercase tracking-wider text-text-secondary">
+                <label htmlFor="name" className="mb-2 block text-xs font-medium uppercase tracking-wider text-text-secondary dark:text-gray-200">
                   Name
                 </label>
                 <input
@@ -153,14 +153,14 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full rounded-xl border border-border-strong bg-white/50 dark:bg-white/5 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
+                  className="w-full rounded-xl border border-border-strong bg-white/50 dark:bg-slate-800/60 dark:border-slate-600/25 px-4 py-3 text-sm text-text-primary dark:text-white outline-none transition-all duration-200 placeholder:text-text-secondary/50 dark:placeholder:text-gray-400 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
                   placeholder="Your name"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="mb-2 block text-xs font-medium uppercase tracking-wider text-text-secondary">
+                <label htmlFor="email" className="mb-2 block text-xs font-medium uppercase tracking-wider text-text-secondary dark:text-gray-200">
                   Email
                 </label>
                 <input
@@ -169,14 +169,14 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full rounded-xl border border-border-strong bg-white/50 dark:bg-white/5 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
+                  className="w-full rounded-xl border border-border-strong bg-white/50 dark:bg-slate-800/60 dark:border-slate-600/25 px-4 py-3 text-sm text-text-primary dark:text-white outline-none transition-all duration-200 placeholder:text-text-secondary/50 dark:placeholder:text-gray-400 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
                   placeholder="your@email.com"
                 />
               </div>
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="mb-2 block text-xs font-medium uppercase tracking-wider text-text-secondary">
+                <label htmlFor="message" className="mb-2 block text-xs font-medium uppercase tracking-wider text-text-secondary dark:text-gray-200">
                   Message
                 </label>
                 <textarea
@@ -185,7 +185,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full resize-none rounded-xl border border-border-strong bg-white/50 dark:bg-white/5 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
+                  className="w-full resize-none rounded-xl border border-border-strong bg-white/50 dark:bg-slate-800/60 dark:border-slate-600/25 px-4 py-3 text-sm text-text-primary dark:text-white outline-none transition-all duration-200 placeholder:text-text-secondary/50 dark:placeholder:text-gray-400 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
                   placeholder="Tell me about the opportunity or project..."
                 />
               </div>

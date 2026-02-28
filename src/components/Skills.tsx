@@ -39,7 +39,7 @@ const skillCategories = [
 export default function Skills() {
   return (
     <section id="skills" className="relative py-32 px-6">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      <div className="section-divider absolute inset-x-0 top-0" />
 
       <div className="mx-auto max-w-6xl">
         <SectionHeading
@@ -67,7 +67,7 @@ export default function Skills() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-xl transition-all duration-300 group-hover:scale-110">
                   {category.emoji}
                 </div>
-                <h3 className="text-sm font-semibold text-text-primary">
+                <h3 className="text-sm font-semibold text-text-primary dark:text-white">
                   {category.title}
                 </h3>
               </div>
@@ -84,7 +84,7 @@ export default function Skills() {
                       duration: 0.3,
                       delay: catIdx * 0.1 + skillIdx * 0.03,
                     }}
-                    className="rounded-full border border-border-strong bg-white/60 dark:bg-white/10 px-3.5 py-1.5 text-xs font-medium text-text-secondary transition-all duration-200 hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+                    className="rounded-full border border-border-strong bg-white/60 dark:bg-slate-700/50 dark:border-slate-500/20 px-3.5 py-1.5 text-xs font-medium text-text-secondary dark:text-gray-200 transition-all duration-200 hover:border-primary/40 hover:bg-primary/5 hover:text-primary dark:hover:bg-slate-600/50 dark:hover:border-indigo-400/30"
                   >
                     {skill}
                   </motion.span>

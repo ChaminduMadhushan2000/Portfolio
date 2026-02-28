@@ -53,7 +53,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-32 px-6">
+    <section id="projects" className="section-tinted relative py-32 px-6">
+      <div className="section-divider absolute inset-x-0 top-0" />
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="Projects"
@@ -88,12 +89,12 @@ export default function Projects() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-3 text-xl font-semibold tracking-tight text-text-primary">
+                <h3 className="mb-3 text-xl font-semibold tracking-tight text-text-primary dark:text-white">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mb-6 text-sm leading-relaxed text-text-secondary">
+                <p className="mb-6 text-sm leading-relaxed text-text-secondary dark:text-gray-200">
                   {project.description}
                 </p>
 
@@ -102,7 +103,7 @@ export default function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-border-strong bg-white/50 dark:bg-white/10 px-3 py-1 text-[11px] font-medium text-text-secondary"
+                      className="rounded-full border border-border-strong bg-white/50 dark:bg-slate-700/50 dark:border-slate-500/20 px-3 py-1 text-[11px] font-medium text-text-secondary dark:text-gray-200"
                     >
                       {tag}
                     </span>

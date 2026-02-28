@@ -107,13 +107,13 @@ export default function Chatbot() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 8, scale: 0.9 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="relative rounded-2xl border border-white/50 dark:border-white/10 bg-white/80 dark:bg-slate-900/90 px-4 py-2.5 shadow-lg shadow-indigo-500/10 backdrop-blur-xl"
+              className="relative rounded-2xl border border-white/50 dark:border-slate-600/30 bg-white/80 dark:bg-slate-800/90 px-4 py-2.5 shadow-lg shadow-indigo-500/10 backdrop-blur-xl"
             >
-              <p className="whitespace-nowrap text-xs font-medium text-text-primary sm:text-sm">
+              <p className="whitespace-nowrap text-xs font-medium text-text-primary dark:text-white sm:text-sm">
                 Hi, I am <span className="font-semibold text-primary">Chamindu&apos;s AI Assistant!</span>
               </p>
               {/* Tail arrow */}
-              <div className="absolute -bottom-1.5 right-6 h-3 w-3 rotate-45 border-b border-r border-white/50 dark:border-white/10 bg-white/80 dark:bg-slate-900/90" />
+              <div className="absolute -bottom-1.5 right-6 h-3 w-3 rotate-45 border-b border-r border-white/50 dark:border-slate-600/30 bg-white/80 dark:bg-slate-800/90" />
             </motion.div>
           )}
         </AnimatePresence>
@@ -159,10 +159,10 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed bottom-24 right-6 z-50 flex h-[28rem] w-[22rem] flex-col overflow-hidden rounded-3xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-slate-900/90 shadow-2xl shadow-indigo-500/10 backdrop-blur-xl sm:w-[24rem]"
+            className="fixed bottom-24 right-6 z-50 flex h-[28rem] w-[22rem] flex-col overflow-hidden rounded-3xl border border-white/40 dark:border-slate-600/25 bg-white/80 dark:bg-slate-800/95 shadow-2xl shadow-indigo-500/10 backdrop-blur-xl sm:w-[24rem]"
           >
             {/* Header */}
-            <div className="flex items-center gap-3 border-b border-white/40 dark:border-white/10 bg-gradient-to-r from-indigo-500 to-purple-600 px-5 py-4">
+            <div className="flex items-center gap-3 border-b border-white/40 dark:border-slate-600/20 bg-gradient-to-r from-indigo-500 to-purple-600 px-5 py-4">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-sm">
                 &#x1F916;
               </div>
@@ -185,7 +185,7 @@ export default function Chatbot() {
                     className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-line ${
                       msg.role === "user"
                         ? "bg-gradient-to-br from-indigo-500 to-purple-600 text-white"
-                        : "border border-border-strong bg-white/60 dark:bg-white/10 text-text-primary"
+                        : "border border-border-strong bg-white/60 dark:bg-slate-700/60 dark:border-slate-600/25 text-text-primary dark:text-gray-100"
                     }`}
                   >
                     {msg.content}
@@ -194,7 +194,7 @@ export default function Chatbot() {
               ))}
               {loading && (
                 <div className="flex justify-start">
-                  <div className="flex items-center gap-1.5 rounded-2xl border border-border-strong bg-white/60 dark:bg-white/10 px-4 py-3">
+                  <div className="flex items-center gap-1.5 rounded-2xl border border-border-strong bg-white/60 dark:bg-slate-700/60 dark:border-slate-600/25 px-4 py-3">
                     <span className="h-2 w-2 animate-bounce rounded-full bg-primary/60 [animation-delay:0ms]" />
                     <span className="h-2 w-2 animate-bounce rounded-full bg-primary/60 [animation-delay:150ms]" />
                     <span className="h-2 w-2 animate-bounce rounded-full bg-primary/60 [animation-delay:300ms]" />
@@ -206,7 +206,7 @@ export default function Chatbot() {
             {/* Input */}
             <form
               onSubmit={handleSubmit}
-              className="flex items-end gap-2 border-t border-white/40 dark:border-white/10 bg-white/50 dark:bg-slate-800/50 px-4 py-3"
+              className="flex items-end gap-2 border-t border-white/40 dark:border-slate-600/25 bg-white/50 dark:bg-slate-800/70 px-4 py-3"
             >
               <textarea
                 value={input}
@@ -214,7 +214,7 @@ export default function Chatbot() {
                 onKeyDown={handleKeyDown}
                 placeholder="Ask me anything..."
                 rows={1}
-                className="max-h-20 flex-1 resize-none rounded-xl border border-border-strong bg-white/60 dark:bg-white/10 px-3 py-2.5 text-sm text-text-primary outline-none placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
+                className="max-h-20 flex-1 resize-none rounded-xl border border-border-strong bg-white/60 dark:bg-slate-700/50 dark:border-slate-600/25 px-3 py-2.5 text-sm text-text-primary dark:text-white outline-none placeholder:text-text-secondary/50 dark:placeholder:text-gray-400 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
               />
               <button
                 type="submit"
