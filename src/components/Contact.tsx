@@ -153,7 +153,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full rounded-xl border border-border-strong bg-white/50 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
+                  className="w-full rounded-xl border border-border-strong bg-white/50 dark:bg-white/5 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
                   placeholder="Your name"
                 />
               </div>
@@ -169,7 +169,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full rounded-xl border border-border-strong bg-white/50 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
+                  className="w-full rounded-xl border border-border-strong bg-white/50 dark:bg-white/5 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
                   placeholder="your@email.com"
                 />
               </div>
@@ -185,7 +185,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full resize-none rounded-xl border border-border-strong bg-white/50 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
+                  className="w-full resize-none rounded-xl border border-border-strong bg-white/50 dark:bg-white/5 px-4 py-3 text-sm text-text-primary outline-none transition-all duration-200 placeholder:text-text-secondary/50 focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
                   placeholder="Tell me about the opportunity or project..."
                 />
               </div>

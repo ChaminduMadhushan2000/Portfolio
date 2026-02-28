@@ -107,7 +107,7 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.08 }}
-                    className="group flex items-start gap-3 rounded-xl border border-transparent p-3 transition-all duration-200 hover:border-border-strong hover:bg-white/30"
+                    className="group flex items-start gap-3 rounded-xl border border-transparent p-3 transition-all duration-200 hover:border-border-strong hover:bg-white/30 dark:hover:bg-white/5"
                   >
                     <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-xs">
                       &#x2705;

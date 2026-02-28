@@ -84,7 +84,7 @@ export default function Skills() {
                       duration: 0.3,
                       delay: catIdx * 0.1 + skillIdx * 0.03,
                     }}
-                    className="rounded-full border border-border-strong bg-white/60 px-3.5 py-1.5 text-xs font-medium text-text-secondary transition-all duration-200 hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+                    className="rounded-full border border-border-strong bg-white/60 dark:bg-white/10 px-3.5 py-1.5 text-xs font-medium text-text-secondary transition-all duration-200 hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
                   >
                     {skill}
                   </motion.span>
